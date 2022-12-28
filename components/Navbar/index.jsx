@@ -3,6 +3,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import { FaDiscord } from "react-icons/fa";
+import Image from "next/image";
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
@@ -22,7 +23,7 @@ export default function Navbar() {
               <div className="flex">
                 <div className="-ml-2 mr-2 flex items-center md:hidden">
                   {/* Mobile menu button */}
-                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
+                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
                       <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -32,46 +33,61 @@ export default function Navbar() {
                   </Disclosure.Button>
                 </div>
                 <div className="flex flex-shrink-0 items-center">
-                  <img
+                <Image
+                    width={200}
+                    height={200}
                     className="block h-8 w-auto lg:hidden"
                     src="/images/vipers.png"
                     alt="Your Company"
                   />
-                  <img
-                    className="hidden h-8 w-auto lg:block"
+                  <Image
+                    width={200}
+                    height={200}
+                    className="hidden h-12 w-auto lg:block"
                     src="/images/vipers.png"
                     alt="Your Company"
                   />
+                  <div className="flex items-center justify-center">
+                    <h1
+                      className="ml-3 mb-2 text-emerald-600 text-4xl"
+                      style={{
+                        textShadow:
+                          "0px 4px 3px rgba(0,0,0,0.4),0px 8px 13px rgba(0,0,0,0.1),0px 18px 23px rgba(0,0,0,0.1);",
+                      }}
+                    >
+                      Vipers
+                    </h1>
+                  </div>
                 </div>
                 <div className="hidden md:ml-6 md:flex md:space-x-8">
-                  {/* Current: "border-emerald-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-emerald-500 hover:text-emerald-700" */}
+                  {/* Current: "border-emerald-500 text-gray-900", Default: "border-transparent text-white hover:border-emerald-500 hover:text-emerald-700" */}
                   <a
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-emerald-500 hover:text-emerald-700"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-emerald-500 hover:text-emerald-700"
                   >
                     Home
                   </a>
                   <a
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-emerald-500 hover:text-emerald-700"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-emerald-500 hover:text-emerald-700"
                   >
                     Projects
                   </a>
                   <a
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-emerald-500 hover:text-emerald-700"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-emerald-500 hover:text-emerald-700"
                   >
                     Leaderboard
                   </a>
                   <a
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-emerald-500 hover:text-emerald-700"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-emerald-500 hover:text-emerald-700"
                   >
                     Habit Tracker
                   </a>
                   <a
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-emerald-500 hover:text-emerald-700"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-emerald-500 hover:text-emerald-700"
                   >
                     Daily Challenges
                   </a>
@@ -95,7 +111,7 @@ export default function Navbar() {
                 <div className="hidden md:ml-4 md:flex md:flex-shrink-0 md:items-center">
                   <button
                     type="button"
-                    className="rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                    className="rounded-full bg-white p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
                   >
                     <span className="sr-only">View notifications</span>
                     <BellIcon className="h-6 w-6" aria-hidden="true" />
@@ -172,39 +188,39 @@ export default function Navbar() {
 
           <Disclosure.Panel className="md:hidden">
             <div className="space-y-1 pt-2 pb-3">
-              {/* Current: "bg-emerald-50 border-emerald-500 text-emerald-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-emerald-500 hover:text-emerald-700" */}
+              {/* Current: "bg-emerald-50 border-emerald-500 text-emerald-700", Default: "border-transparent text-white hover:bg-gray-50 hover:border-emerald-500 hover:text-emerald-700" */}
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-emerald-500 hover:bg-gray-50 hover:text-emerald-700 sm:pl-5 sm:pr-6"
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-emerald-500 hover:bg-gray-50 hover:text-emerald-700 sm:pl-5 sm:pr-6"
               >
                 Home
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-emerald-500 hover:bg-gray-50 hover:text-emerald-700 sm:pl-5 sm:pr-6"
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-emerald-500 hover:bg-gray-50 hover:text-emerald-700 sm:pl-5 sm:pr-6"
               >
                 Projects
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-emerald-500 hover:bg-gray-50 hover:text-emerald-700 sm:pl-5 sm:pr-6"
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-emerald-500 hover:bg-gray-50 hover:text-emerald-700 sm:pl-5 sm:pr-6"
               >
                 Leaderboards
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-emerald-500 hover:bg-gray-50 hover:text-emerald-700 sm:pl-5 sm:pr-6"
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-emerald-500 hover:bg-gray-50 hover:text-emerald-700 sm:pl-5 sm:pr-6"
               >
                 Habit Tracker
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-emerald-500 hover:bg-gray-50 hover:text-emerald-700 sm:pl-5 sm:pr-6"
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-emerald-500 hover:bg-gray-50 hover:text-emerald-700 sm:pl-5 sm:pr-6"
               >
                 Daily Challenges
               </Disclosure.Button>
@@ -222,13 +238,13 @@ export default function Navbar() {
                   <div className="text-base font-medium text-gray-800">
                     Tom Cook
                   </div>
-                  <div className="text-sm font-medium text-gray-500">
+                  <div className="text-sm font-medium text-white">
                     tom@example.com
                   </div>
                 </div>
                 <button
                   type="button"
-                  className="ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                  className="ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
                 >
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
@@ -238,21 +254,21 @@ export default function Navbar() {
                 <Disclosure.Button
                   as="a"
                   href="#"
-                  className="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800 sm:px-6"
+                  className="block px-4 py-2 text-base font-medium text-white hover:bg-gray-100 hover:text-gray-800 sm:px-6"
                 >
                   Your Profile
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
                   href="#"
-                  className="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800 sm:px-6"
+                  className="block px-4 py-2 text-base font-medium text-white hover:bg-gray-100 hover:text-gray-800 sm:px-6"
                 >
                   Settings
                 </Disclosure.Button>
                 <Disclosure.Button
                   as="a"
                   href="#"
-                  className="block px-4 py-2 text-base font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-800 sm:px-6"
+                  className="block px-4 py-2 text-base font-medium text-white hover:bg-gray-100 hover:text-gray-800 sm:px-6"
                 >
                   Sign out
                 </Disclosure.Button>
