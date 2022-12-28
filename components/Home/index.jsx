@@ -1,10 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import style from "./Home.module.css";
 const Home = () => {
   return (
     <div className="flex justify-center bg-black w-100 h-100 flex-col p-28">
-      <h1 className="text-4xl md:text-7xl text-center text-white mb-24">
+      <h1 className="text-4xl md:text-7xl text-center text-white mb-16 font-bold">
       &quot;Sapientia abscondtia&quot;
         <br />
         Hidden Wisdom
@@ -14,7 +13,7 @@ const Home = () => {
           <Image src="/images/Home1.png" width={800} height={800} style={{maxWidth:"100vw"}} alt="thomas qoute"/>
         </div>
         <div>
-          <h2 className="text-white text-center">
+          <h2 className="text-white text-center text-2xl">
             We strike at night <br />
             We are the Vipers <br />
             We don&apos;t need light <br />

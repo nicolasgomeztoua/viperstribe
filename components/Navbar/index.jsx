@@ -23,7 +23,7 @@ export default function Navbar() {
               <div className="flex">
                 <div className="-ml-2 mr-2 flex items-center md:hidden">
                   {/* Mobile menu button */}
-                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500">
+                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-lime-400">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
                       <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
@@ -49,8 +49,9 @@ export default function Navbar() {
                   />
                   <div className="flex items-center justify-center">
                     <h1
-                      className="ml-3 mb-2 text-emerald-600 text-4xl"
+                      className="ml-3 mb-1 text-4xl"
                       style={{
+                        color:"#d3fe5e",
                         textShadow:
                           "0px 4px 3px rgba(0,0,0,0.4),0px 8px 13px rgba(0,0,0,0.1),0px 18px 23px rgba(0,0,0,0.1);",
                       }}
@@ -60,34 +61,34 @@ export default function Navbar() {
                   </div>
                 </div>
                 <div className="hidden md:ml-6 md:flex md:space-x-8">
-                  {/* Current: "border-emerald-500 text-gray-900", Default: "border-transparent text-white hover:border-emerald-500 hover:text-emerald-700" */}
+                  {/* Current: "border-lime-500 text-gray-900", Default: "border-transparent text-white hover:border-lime-500 hover:text-lime-400" */}
                   <a
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-emerald-500 hover:text-emerald-700"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-lime-500 hover:text-lime-400"
                   >
                     Home
                   </a>
                   <a
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-emerald-500 hover:text-emerald-700"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-lime-500 hover:text-lime-400"
                   >
                     Projects
                   </a>
                   <a
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-emerald-500 hover:text-emerald-700"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-lime-500 hover:text-lime-400"
                   >
                     Leaderboard
                   </a>
                   <a
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-emerald-500 hover:text-emerald-700"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-lime-500 hover:text-lime-400"
                   >
                     Habit Tracker
                   </a>
                   <a
                     href="#"
-                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-emerald-500 hover:text-emerald-700"
+                    className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-white hover:border-lime-500 hover:text-lime-400"
                   >
                     Daily Challenges
                   </a>
@@ -97,7 +98,7 @@ export default function Navbar() {
                 <div className="flex-shrink-0">
                   <button
                     type="button"
-                    className="relative inline-flex items-center rounded-md border border-transparent bg-emerald-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                    className="relative inline-flex items-center rounded-md border border-transparent bg-lime-400 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-lime-400 focus:outline-none focus:ring-2 focus:ring-lime-400 focus:ring-offset-2"
                     style={{ background: "rgb(114, 137, 218)" }}
                   >
                     <span>Login With Discord</span>
@@ -111,7 +112,7 @@ export default function Navbar() {
                 <div className="hidden md:ml-4 md:flex md:flex-shrink-0 md:items-center">
                   <button
                     type="button"
-                    className="rounded-full bg-white p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                    className="rounded-full bg-white p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-lime-400 focus:ring-offset-2"
                   >
                     <span className="sr-only">View notifications</span>
                     <BellIcon className="h-6 w-6" aria-hidden="true" />
@@ -120,7 +121,7 @@ export default function Navbar() {
                   {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
                     <div>
-                      <Menu.Button className="flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2">
+                      <Menu.Button className="flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-lime-400 focus:ring-offset-2">
                         <span className="sr-only">Open user menu</span>
                         <img
                           className="h-8 w-8 rounded-full"
@@ -188,39 +189,39 @@ export default function Navbar() {
 
           <Disclosure.Panel className="md:hidden">
             <div className="space-y-1 pt-2 pb-3">
-              {/* Current: "bg-emerald-50 border-emerald-500 text-emerald-700", Default: "border-transparent text-white hover:bg-gray-50 hover:border-emerald-500 hover:text-emerald-700" */}
+              {/* Current: "bg-lime-400border-lime-500 text-lime-400", Default: "border-transparent text-white hover:bg-gray-50 hover:border-lime-500 hover:text-lime-400" */}
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-emerald-500 hover:bg-gray-50 hover:text-emerald-700 sm:pl-5 sm:pr-6"
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-lime-500 hover:bg-gray-50 hover:text-lime-400 sm:pl-5 sm:pr-6"
               >
                 Home
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-emerald-500 hover:bg-gray-50 hover:text-emerald-700 sm:pl-5 sm:pr-6"
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-lime-500 hover:bg-gray-50 hover:text-lime-400 sm:pl-5 sm:pr-6"
               >
                 Projects
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-emerald-500 hover:bg-gray-50 hover:text-emerald-700 sm:pl-5 sm:pr-6"
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-lime-500 hover:bg-gray-50 hover:text-lime-400 sm:pl-5 sm:pr-6"
               >
                 Leaderboards
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-emerald-500 hover:bg-gray-50 hover:text-emerald-700 sm:pl-5 sm:pr-6"
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-lime-500 hover:bg-gray-50 hover:text-lime-400 sm:pl-5 sm:pr-6"
               >
                 Habit Tracker
               </Disclosure.Button>
               <Disclosure.Button
                 as="a"
                 href="#"
-                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-emerald-500 hover:bg-gray-50 hover:text-emerald-700 sm:pl-5 sm:pr-6"
+                className="block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-white hover:border-lime-500 hover:bg-gray-50 hover:text-lime-400 sm:pl-5 sm:pr-6"
               >
                 Daily Challenges
               </Disclosure.Button>
@@ -244,7 +245,7 @@ export default function Navbar() {
                 </div>
                 <button
                   type="button"
-                  className="ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                  className="ml-auto flex-shrink-0 rounded-full bg-white p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-lime-400 focus:ring-offset-2"
                 >
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
